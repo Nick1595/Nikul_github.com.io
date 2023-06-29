@@ -1,0 +1,13 @@
+body{
+  background: linear-gradient( 262deg, orange, lightcoral );
+}
+#Price{
+  border: none;
+  
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}

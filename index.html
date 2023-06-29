@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>CART</title>
+</head>
+<body> <center>
+  <section class="cart"> 
+      <h1>Cart</h1>
+  </section> 
+  <section class="flex">
+  <section class="item item-1">
+     <img src="/image/watch.jpg" alt="" height="300rem">
+     <p>WATCH</p> 
+    <input type="text" id="Price" readonly value="13500"><br>
+     <del>15000</del> <br>
+     <input type="number" min="1" value="1" max="9" id="qty" onchange="add()">
+     <p class="off">10% OFF</p>
+    <label id="total">Total Rs.14500</label> <br>
+    <!-- <p id="subtotal">total price=14.500</p> -->
+    </section>
+  </section>
+  </section>
+</center>
+<script>
+  function add()
+{
+var p = document.getElementById("Price").value;
+var q = document.getElementById("qty").value;
+var total = p*q; 
+document.getElementById("total").innerHTML="rs."+total;
+}
+function off()
+{
+  var p = document.getElementById("Price").value;
+  var q = document.getElementById("qty").value;
+
+  var total=p*q; 
+  var t=sub/10;
+  var off=total-t;
+  document.getElementById("subtotal").innerHTML="total Price="+off;
+}
+</script>
+</body>
+</html>
